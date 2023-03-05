@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Link from "next/link";
-function Navbar() {
+function Navbar(props) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function toggleMobileMenu() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  function showPopupLogin() {
+    props.showPopupLogin();
   }
 
   return (
@@ -63,6 +67,9 @@ function Navbar() {
                 </a>
               </div>
             </div>
+          </div>
+          <div>
+            <span className="text-white cursor-pointer hidden md:inline-block" onClick={() => showPopupLogin()}>Đăng nhập</span>
           </div>
         </div>
       </div>
