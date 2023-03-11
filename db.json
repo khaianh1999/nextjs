@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user_name": "khainv",
+      "full_name": "Khải Đại ca",
+      "pass_word": "12345678"
+    },
+    {
+      "id": 2,
+      "user_name": "minhnn",
+      "full_name": "Minh Đệ Tử",
+      "pass_word": "12345678"
+    },
+    {
+      "id": 3,
+      "user_name": "khaianhtb",
+      "full_name": "Khải đại ca",
+      "pass_word": "191299"
+    }
+  ]
+}

@@ -15,15 +15,20 @@ function Layout({ children }) {
     const handleShowPopupRegister = () => {
       setShowPopupLogin(false);
       setShowPopupRegister(true);
-    }    
+    }
+    const hiddenPopups = () => {
+      setShowPopupLogin(false);
+      setShowPopupRegister(false);
+    }
+        
     return (
       <div>
         <Navbar showPopupLogin={handleShowPopupLogin}/>
         <MySlider />
         <main>{children}</main>
         <Footer />
-        <Login showPopupLogin={showPopupLogin} showPopupRegister={handleShowPopupRegister}/>
-        <Register showPopupRegister={showPopupRegister} showPopupLogin={handleShowPopupLogin}/>
+        <Login showPopupLogin={showPopupLogin} showPopupRegister={handleShowPopupRegister} hiddenPopups={hiddenPopups}/>
+        <Register showPopupRegister={showPopupRegister} showPopupLogin={handleShowPopupLogin} hiddenPopups={hiddenPopups}/>
       </div>
     );
   }
