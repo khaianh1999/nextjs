@@ -1,5 +1,6 @@
 import userServices from '@/services/axios';
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function Register(props) {
     
@@ -18,7 +19,7 @@ function Register(props) {
     async function registerAccount(e) {
         e.preventDefault();
         const params = {
-            "id": 3,
+            "id": uuidv4(),
             "user_name": UserName,
             "full_name": FullName,
             "pass_word": PassWord
